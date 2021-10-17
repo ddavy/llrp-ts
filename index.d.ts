@@ -1,10 +1,8 @@
 import { EventEmitter } from 'events';
 
-import { LlrpReader } from './src/index';
-
 import { ReaderConfig, AntennaConfig, Logger } from './src/interfaces/llrp';
 
-export class LLRP extends EventEmitter implements LlrpReader {
+export class LLRP extends EventEmitter {
   connected: boolean;
   constructor(config: ReaderConfig, logger?: Logger);
   connect(): void;
